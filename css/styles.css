@@ -205,7 +205,6 @@ p {
 .modal-content {
   margin: 0;
   position: relative;
-  /* padding-left:24px; */
   background-color: white;
   width: 408px;
   height: 584px;
@@ -260,12 +259,12 @@ p {
 .form {
   padding-left: 24px;
 }
+
 .form-group {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 4px;
-
   margin-bottom: 8px;
   color: #757575;
   font-family: Roboto;
@@ -275,6 +274,12 @@ p {
   line-height: normal;
   letter-spacing: 0.12px;
 }
+
+.form-group:focus .box-size-textarea,
+.form-group:hover .box-size-textarea {
+  color: black;
+  cursor: pointer;
+}
 .box-size-textarea {
   cursor: pointer;
   padding-left: 44px;
@@ -282,12 +287,13 @@ p {
   height: 40px;
   flex-shrink: 0;
   border-radius: 4px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
+  border: 1px solid #4d5ae5;
   transition: var(--transition);
 }
 .box-size-textarea:hover,
 .box-size-textarea:focus {
-  border: 1px solid #2196f3;
+  border: 2px solid #2196f3;
+  outline: none;
 }
 
 .icons-modal-content {
@@ -298,22 +304,14 @@ p {
   top: 50%;
 }
 
+.form-group:focus-within .icons-modal-content {
+  fill: #2196f3;
+}
 .icons-modal-content:focus,
 .icons-modal-content:hover {
   cursor: pointer;
   color: #2196f3;
   transition: var(--transition);
-}
-
-.form-group:focus .box-size-textarea,
-.form-group:hover .box-size-textarea {
-  border-color: #2196f3;
-  cursor: pointer;
-}
-
-.form-group:focus .icons-modal-content,
-.form-group:focus .icons-modal-content {
-  color: #2196f3;
 }
 
 .mesage-box-size {
@@ -328,7 +326,8 @@ p {
 
 .mesage-box-size:focus,
 .mesage-box-size:hover {
-  border: 1px solid #2196f3;
+  border: 2px solid #2196f3;
+  outline: none;
 }
 
 .checkbox-wrapper-1 *,
@@ -470,6 +469,7 @@ p {
   flex-shrink: 0;
   margin-top: 10px;
   margin-left: 95px;
+  border: none;
 }
 
 /* Modal End */
